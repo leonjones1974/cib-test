@@ -16,6 +16,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <dependency.junit.version>4.12</dependency.junit.version>
         <dependency.assertj.version>3.6.2</dependency.assertj.version>
+        <dependency.cucumber.version>2.0.1</dependency.cucumber.version>
     </properties>
 
     <dependencies>
@@ -29,6 +30,18 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${dependency.assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${dependency.cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${dependency.cucumber.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
