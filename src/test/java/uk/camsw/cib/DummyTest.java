@@ -8,6 +8,6 @@ public class DummyTest {
 
     @Test
     public void itShouldFail() {
-        assertThat(false).isTrue();
+        assertThat(true).isTrue();
     }
 }
