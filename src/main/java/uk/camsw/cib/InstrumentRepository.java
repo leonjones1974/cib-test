@@ -1,10 +1,10 @@
 package uk.camsw.cib;
 
-import jdk.nashorn.internal.runtime.options.Option;
+import java.util.Optional;
 
 public interface InstrumentRepository {
 
-    void store(Instrument instrument);
+    void store(Key key, Instrument instrument);
 
     // Prime
     // get the instrument
@@ -13,7 +13,7 @@ public interface InstrumentRepository {
     // store
     // publish
     // this means instrument must retain source
-    Option<Instrument> find(Key key);
+    Optional<Instrument> find(Key key);
 
 
 

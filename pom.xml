@@ -15,7 +15,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <dependency.junit.version>4.12</dependency.junit.version>
-        <dependency.assertj.version>3.6.2</dependency.assertj.version>
+        <dependency.assertj.version>3.7.0</dependency.assertj.version>
         <dependency.cucumber.version>2.0.1</dependency.cucumber.version>
     </properties>
 
