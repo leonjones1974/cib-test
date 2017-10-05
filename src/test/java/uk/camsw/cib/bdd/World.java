@@ -1,10 +1,6 @@
 package uk.camsw.cib.bdd;
 
-import org.assertj.core.util.Lists;
 import uk.camsw.cib.*;
-
-import java.util.List;
-import java.util.concurrent.Executor;
 
 public class World {
 
@@ -17,7 +13,7 @@ public class World {
 
     InstrumentRefDataService service = new InstrumentRefDataService(new InMemoryInstrumentRepository(), publisher, scheduler);
 
-    public void enqueInbound(LmeInstrumentRefData instrument) {
+    public void enqueueInbound(LmeInstrumentRefData instrument) {
 
     }
 

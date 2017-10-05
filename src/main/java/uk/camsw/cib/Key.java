@@ -15,7 +15,6 @@ public class Key {
         Key key = (Key) o;
 
         return value != null ? value.equals(key.value) : key.value == null;
-
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Steps {
         instruments.stream()
                 .limit(1)
                 .map(x -> x.toLme(code))
-                .forEach(world::enqueInbound);
+                .forEach(world::enqueueInbound);
     }
 
     @When("^LME publishes instrument (.+)$")

@@ -1,4 +1,6 @@
 package uk.camsw.cib;
 
-public interface  InstrumentRefData {
+public abstract class InstrumentRefData {
+    public abstract Key getKey();
+
 }
