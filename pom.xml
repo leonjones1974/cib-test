@@ -17,6 +17,7 @@
         <dependency.junit.version>4.12</dependency.junit.version>
         <dependency.assertj.version>3.7.0</dependency.assertj.version>
         <dependency.cucumber.version>2.0.1</dependency.cucumber.version>
+        <dependency.quickcheck.version>0.8-alpha-7</dependency.quickcheck.version>
     </properties>
 
     <dependencies>
@@ -49,6 +50,16 @@
             <artifactId>cucumber-junit</artifactId>
             <version>${dependency.cucumber.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.pholser</groupId>
+            <artifactId>junit-quickcheck-core</artifactId>
+            <version>0.8-alpha-7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pholser</groupId>
+            <artifactId>junit-quickcheck-generators</artifactId>
+            <version>0.8-alpha-7</version>
         </dependency>
     </dependencies>
 
