@@ -3,8 +3,10 @@ package uk.camsw.cib.bdd;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import uk.camsw.cib.Instrument;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -35,7 +37,10 @@ public class Steps {
 
     @Then("^the application publishes the following instruments? internally:")
     public void theApplicationPublishes(List<InstrumentCto> instruments) {
-
+        List<Instrument> expected = instruments.stream()
+                .map(InstrumentCto::toInstrument)
+                .collect(Collectors.toList());
+        assertThat(world.publisher.published).isEqualTo(expected);
     }
 
 
