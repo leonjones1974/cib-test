@@ -21,3 +21,17 @@ Feature: As the reference data system I need to receive instrument ref-data for 
       | Last Trading Date | Delivery Date | Market | Label              | Tradable |
       | 15-03-2018        | 17-03-2018    | PB     | Lead 13 March 2018 | true     |
 
+  Scenario: The application should publish multiple LME instruments
+    Given the LME instrument PB_03_2018:
+      | Last Trading Date | Delivery Date | Market | Label              |
+      | 15-03-2018        | 17-03-2018    | PB     | Lead 13 March 2018 |
+    And the LME instrument PB_04_2018:
+      | Last Trading Date | Delivery Date | Market | Label              |
+      | 16-03-2018        | 18-03-2018    | UK     | Lead 16 March 2018 |
+    When LME publishes instrument PB_03_2018
+    And LME publishes instrument PB_04_2018
+    Then the application publishes the following instrument internally:
+      | Last Trading Date | Delivery Date | Market | Label              | Tradable |
+      | 15-03-2018        | 17-03-2018    | PB     | Lead 13 March 2018 | true     |
+      | 16-03-2018        | 18-03-2018    | UK     | Lead 16 March 2018 | true     |
+

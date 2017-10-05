@@ -19,8 +19,9 @@ public class Steps {
     }
 
     @Given("^the LME instrument (.+):$")
-    public void theLmeInstrument(String code, List<InstrumentRefDataCto> instruments) {
+    public void theLmeInstruments(String code, List<InstrumentRefDataCto> instruments) {
         instruments.stream()
+                .limit(1)
                 .map(x -> x.toLme(code))
                 .forEach(world::enqueInbound);
     }
@@ -41,6 +42,7 @@ public class Steps {
                 .map(InstrumentCto::toInstrument)
                 .collect(Collectors.toList());
         assertThat(world.publisher.published).isEqualTo(expected);
+
     }
 
 
